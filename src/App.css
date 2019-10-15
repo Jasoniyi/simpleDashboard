@@ -26,3 +26,67 @@ h6 {
 .pointer {
   cursor: pointer;
 }
+
+.side-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 1px solid gray;
+}
+
+.icon-wrapper,
+.table-wrapper-body {
+  margin-top: 4em;
+}
+
+.hov {
+  cursor: pointer;
+}
+
+.hov:hover {
+  color: rgb(113, 248, 113) !important;
+}
+
+.table-wrapper {
+  background-color: lightgrey;
+}
+
+.bakery-name {
+  background-color: white !important;
+}
+
+.check-size {
+  width: 1em !important;
+  height: 1em !important;
+}
+
+.row-wrapper {
+  background-color: white !important;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

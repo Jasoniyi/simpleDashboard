@@ -3,8 +3,8 @@ import "./App.css";
 
 import Pic from "./assets/b11.png";
 import FormCard from "./components/FormCard";
-
 import { Link } from "react-router-dom";
+
 import {
   MDBContainer,
   MDBRow,
@@ -92,9 +92,11 @@ class App extends Component {
               </form>
             </MDBModalBody>
             <MDBModalFooter className="justify-content-center">
-              <MDBBtn color="info" type="submit">
-                Register
-              </MDBBtn>
+              <Link to="/dashboard">
+                <MDBBtn color="info" type="submit">
+                  Register
+                </MDBBtn>
+              </Link>
             </MDBModalFooter>
           </MDBModal>
           <footer className="text-center">

@@ -41,13 +41,15 @@ class FormCard extends Component {
               </a>
             </p>
             <div className="text-center mb-3">
-              <MDBBtn
-                type="button"
-                gradient="blue"
-                className="btn-block z-depth-1a round"
-              >
-                <Link to="/dashboard">Sign in</Link>
-              </MDBBtn>
+              <Link to="/dashboard">
+                <MDBBtn
+                  type="button"
+                  gradient="blue"
+                  className="btn-block z-depth-1a round"
+                >
+                  Sign in
+                </MDBBtn>
+              </Link>
             </div>
             <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
               or Sign in with:
