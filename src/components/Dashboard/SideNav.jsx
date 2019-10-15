@@ -5,7 +5,7 @@ import { MDBIcon } from "mdbreact";
 class SideNav extends Component {
   render() {
     return (
-      <div className="side-wrapper my-2">
+      <div className="side-wrapper my-0">
         <div className="icon-wrapper">
           <div className="my-5">
             <MDBIcon

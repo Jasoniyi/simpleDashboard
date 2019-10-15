@@ -9,49 +9,45 @@ import {
 
 class Table extends Component {
   onDelete = () => {
-    const { name, onDelete } = this.props;
-    onDelete(name);
+    this.props.onDelete(this.props.id);
   };
 
   render() {
     console.log(this.props);
-    const items = this.props.data.map((item, i) => {
-      return (
-        <tr key={i}>
-          {/* <th scope="row"></th> */}
-          <td>{item.name}</td>
-          <td>{item.age}</td>
-          <td>{item.company}</td>
-          <td>{item.country}</td>
-          <td>
+    // const items = this.props.data.map((item, i) => {
+    //   return (
+    //     <tr key={i}>
+    //       {/* <th scope="row"></th> */}
+    //       <td>{item.name}</td>
+    //       <td>{item.age}</td>
+    //       <td>{item.company}</td>
+    //       <td>{item.country}</td>
+    //       <td>
+    //         <MDBIcon
+    //           icon="trash-alt"
+    //           className="delete-icon ml-2"
+    //           onClick={this.onDelete}
+    //         />
+    //       </td>
+    //     </tr>
+    //   );
+    // });
+    return (
+      <MDBTableBody className="text-center">
+        <tr>
+          <th>{this.props.name}</th>
+          <th>{this.props.age}</th>
+          <th>{this.props.company}</th>
+          <th>{this.props.country}</th>
+          <th>
             <MDBIcon
               icon="trash-alt"
               className="delete-icon ml-2"
               onClick={this.onDelete}
             />
-          </td>
+          </th>
         </tr>
-      );
-    });
-    return (
-      <MDBRow>
-        <MDBTable
-          responsive
-          className="table table-hover row-wrapper p-3 text-center"
-        >
-          <MDBTableHead>
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Company</th>
-              <th>Country</th>
-              <th>Action</th>
-            </tr>
-          </MDBTableHead>
-
-          <MDBTableBody className="text-center">{items}</MDBTableBody>
-        </MDBTable>
-      </MDBRow>
+      </MDBTableBody>
     );
   }
 }
